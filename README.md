@@ -12,6 +12,13 @@
 $ https://github.com/kkito0726/calcium-imaging-opencv.git
 ```
 
+依存ライブラリのインストール
+
+```
+$ cd calcium-imaging-opencv
+$ pip install .
+```
+
 ### Python ライブラリとして利用する場合
 
 インスト-ルしたい Python 環境を activate した状態で以下のコマンドを実行
