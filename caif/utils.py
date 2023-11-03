@@ -1,5 +1,7 @@
 import cv2
 import numpy as np
+
+from pandas import DataFrame
 from cv2 import VideoCapture
 from numpy import ndarray
 
@@ -28,7 +30,7 @@ def measure_brightness(video_data: ndarray, x: int, y: int) -> ndarray:
 
 
 # 画像内に点を打つ
-def point_image(img, df, index, color=(110, 212, 101)):
+def point_image(img: ndarray, df: DataFrame, index: int, color=(110, 212, 101)):
     # 白黒画像の場合カラー画像へ変換する。
     if len(img.shape) != 3:
         img_color = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
