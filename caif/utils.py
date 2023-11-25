@@ -27,17 +27,3 @@ def measure_brightness(video_data: ndarray, x: int, y: int) -> ndarray:
         brightness[i] = video_data[i][y][x]
 
     return brightness
-
-
-# 画像内に点を打つ
-def point_image(img: ndarray, df: DataFrame, index: int, color=(110, 212, 101)):
-    # 白黒画像の場合カラー画像へ変換する。
-    if len(img.shape) != 3:
-        img_color = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)
-    else:
-        img_color = img
-
-    x, y = df[str(index)][:2]
-    cv2.circle(img_color, (x, y), radius=5, color=color, thickness=-1)
-
-    return img_color
