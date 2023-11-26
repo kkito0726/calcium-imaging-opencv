@@ -24,6 +24,7 @@ def plot_multi(brightness: ndarray, dpi=300, FPS=30) -> list[tuple[int]]:
         c = plt.plot(t, data + i)
         # プロットした色のカラーコードを追加していく
         colors.append(c[0].get_color())
+    plt.yticks(np.arange(0, len(brightness)))
     plt.xlabel("Time (s)")
 
     plt.show()
